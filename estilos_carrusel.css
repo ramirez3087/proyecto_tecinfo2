@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.carrusel-contenedor {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.carrusel-slide {
+    display: none; /* Oculta todas las imágenes por defecto */
+    width: 100%;
+}
+
+.carrusel-slide img {
+    width: 100%;
+    height: auto;
+    display: block; /* Evita espacio extra debajo de la imagen */
+    border-radius: 8px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10; /* Asegura que los botones estén sobre las imágenes */
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.anterior {
+    left: 10px;
+}
+
+.siguiente {
+    right: 10px;
+}
+
+.carrusel-slide.activo {
+    display: block; /* Muestra la imagen activa */
+}

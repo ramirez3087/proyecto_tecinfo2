@@ -1,0 +1,24 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Crea una cuadrícula responsive */
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    border: 5px solid blue; /* Marco azul */
+    box-sizing: border-box; /* Incluye el borde en el tamaño del elemento */
+    cursor: pointer; /* Indica que la imagen es interactiva */
+    transition: transform 0.3s ease-in-out; /* Animación suave al hacer hover */
+}
+
+.galeria img:hover {
+    transform: scale(1.05); /* Ligeramente más grande al pasar el ratón */
+}
